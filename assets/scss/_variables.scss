@@ -1,0 +1,27 @@
+// Bootstrap Variables overrides
+
+$primary: #0067f6;
+$dark: #0e0f0f;
+$black: #000000;
+$white: #ffffff;
+
+$theme-colors : (
+    "primary":  $primary,
+    "dark":     $dark,
+    "black":    $black,
+    "white":    $white
+);
+
+$yiq-text-dark: $dark;
+
+$font-family-base:            'Mukta', sans-serif;
+
+$font-weight-light:           400;
+$font-weight-normal:          500;
+$font-weight-medium:          600;
+$font-weight-semibold:        700;
+$font-weight-bold:            800;
+
+$body-bg: #f3f3f3;
+$body-color: $black;
+
