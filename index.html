@@ -1034,14 +1034,15 @@
                            });
                         </script>
 
-                        <script>
+                        <script type="text/javascript">
                            // nama tamu
                            jQuery(document).ready(function ($) {
                               'use strict';
                               const queryString = window.location.search;
+                              console.log(queryString);
                               const urlParams = new URLSearchParams(queryString);
-                              const nama = urlParams.get('to')
-                              $('#nama-tamu').val(nama)
+                              const nama = urlParams.get('to');
+                              $('#nama-tamu').html(nama);
                            });
                         </script>
 
