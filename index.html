@@ -857,7 +857,7 @@
                   data-aos-duration="2500" data-aos-easing="lease-in-cube" data-aos-offset="10"
                   data-widget_type="heading.default">
                   <div class="elementor-widget-container">
-                     <h2 class="elementor-heading-title elementor-size-default">Nama Tamu</h2>
+                     <h2 class="elementor-heading-title elementor-size-default" id="nama-tamu">Nama Tamu</h2>
                   </div>
                </div>
                <div
@@ -1031,6 +1031,17 @@
                            jQuery(document).ready(function ($) {
                               'use strict';
                               $("#wpkoi-elements-countdown-49aba34").countdown();
+                           });
+                        </script>
+
+                        <script>
+                           // nama tamu
+                           jQuery(document).ready(function ($) {
+                              'use strict';
+                              const queryString = window.location.search;
+                              const urlParams = new URLSearchParams(queryString);
+                              const nama = urlParams.get('to')
+                              $('#nama-tamu').val(nama)
                            });
                         </script>
 
