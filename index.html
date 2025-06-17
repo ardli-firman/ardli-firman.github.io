@@ -1785,19 +1785,25 @@
 
                                           <script>
                                              function copyText(el) {
-                                                var content = jQuery(el).siblings('div.copy-content').html()
+                                                var content = jQuery(el).siblings('div.copy-content').text();
+                                                var contentWithoutSpaces = content.replace(/\s/g, '');
+
                                                 var temp = jQuery("<textarea>");
                                                 jQuery("body").append(temp);
-                                                temp.val(content.replace(/<br ?\/?>/g, "\n")).select();
+
+                                                temp.val(contentWithoutSpaces).select();
                                                 document.execCommand("copy");
+
                                                 temp.remove();
-                                                var text = jQuery(el).html()
-                                                jQuery(el).html(jQuery(el).data('message'))
+
+                                                var text = jQuery(el).html();
+                                                jQuery(el).html(jQuery(el).data('message'));
                                                 var counter = 0;
                                                 var interval = setInterval(function () {
                                                    counter++;
                                                    if (counter == 1) {
-                                                      jQuery(el).html(text)
+                                                      jQuery(el).html(text);
+                                                      clearInterval(interval);
                                                    }
                                                 }, 500);
                                              }
@@ -1889,19 +1895,25 @@
 
                                           <script>
                                              function copyText(el) {
-                                                var content = jQuery(el).siblings('div.copy-content').html()
+                                                var content = jQuery(el).siblings('div.copy-content').text();
+                                                var contentWithoutSpaces = content.replace(/\s/g, '');
+
                                                 var temp = jQuery("<textarea>");
                                                 jQuery("body").append(temp);
-                                                temp.val(content.replace(/<br ?\/?>/g, "\n")).select();
+
+                                                temp.val(contentWithoutSpaces).select();
                                                 document.execCommand("copy");
+
                                                 temp.remove();
-                                                var text = jQuery(el).html()
-                                                jQuery(el).html(jQuery(el).data('message'))
+
+                                                var text = jQuery(el).html();
+                                                jQuery(el).html(jQuery(el).data('message'));
                                                 var counter = 0;
                                                 var interval = setInterval(function () {
                                                    counter++;
                                                    if (counter == 1) {
-                                                      jQuery(el).html(text)
+                                                      jQuery(el).html(text);
+                                                      clearInterval(interval);
                                                    }
                                                 }, 500);
                                              }
@@ -1993,19 +2005,25 @@
 
                                           <script>
                                              function copyText(el) {
-                                                var content = jQuery(el).siblings('div.copy-content').html()
+                                                var content = jQuery(el).siblings('div.copy-content').text();
+                                                var contentWithoutSpaces = content.replace(/\s/g, '');
+
                                                 var temp = jQuery("<textarea>");
                                                 jQuery("body").append(temp);
-                                                temp.val(content.replace(/<br ?\/?>/g, "\n")).select();
+
+                                                temp.val(contentWithoutSpaces).select();
                                                 document.execCommand("copy");
+
                                                 temp.remove();
-                                                var text = jQuery(el).html()
-                                                jQuery(el).html(jQuery(el).data('message'))
+
+                                                var text = jQuery(el).html();
+                                                jQuery(el).html(jQuery(el).data('message'));
                                                 var counter = 0;
                                                 var interval = setInterval(function () {
                                                    counter++;
                                                    if (counter == 1) {
-                                                      jQuery(el).html(text)
+                                                      jQuery(el).html(text);
+                                                      clearInterval(interval);
                                                    }
                                                 }, 500);
                                              }
